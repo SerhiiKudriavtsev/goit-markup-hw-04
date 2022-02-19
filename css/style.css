@@ -20,6 +20,8 @@
   --hero-buttom-hover-color: #188ce8;
   --button-shadow-color: rgba(0, 0, 0, 25);
   --heder-bottom-line: #ececec;
+  --background-hero-color: #c4c4c4;
+  --background-socialNetworks-color: #afb1b8;
 }
 
 html {
@@ -62,6 +64,17 @@ li {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /* ===Хедер===*/
 /* ===Логотип=== */
 .header {
@@ -73,7 +86,7 @@ li {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  color: #2196f3;
+  color: var(--accent-color);
   margin-right: 93px;
   align-self: center;
 }
@@ -125,6 +138,11 @@ nav ul {
 .telh {
   color: var(--parahraf-text-color);
 }
+
+.header-icon {
+  margin-right: 10px;
+  outline: 1px solid tomato;
+}
 .header .list:hover,
 .header .list:focus {
   color: var(--accent-color);
@@ -138,7 +156,6 @@ nav ul {
 .section-hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--background-hero-footer-color);
 }
 .hero {
   margin-top: 0px;
@@ -163,10 +180,7 @@ button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   display: inline-block;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
   border-color: var(--accent-color);
@@ -178,6 +192,20 @@ button {
 button:hover,
 button:focus {
   background-color: var(--hero-buttom-hover-color);
+}
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-hero-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-background-min.jpg);
 }
 
 /* ===Секции=== */
@@ -235,6 +263,20 @@ p {
   font-size: 14px;
   line-height: 1.71;
 }
+.section-background-icon {
+  display: flex;
+  min-width: 170px;
+  min-height: 120px;
+  background-color: var(--background-team-color);
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.section-icon {
+  display: flex;
+  width: 70px;
+  height: 70px;
+}
 
 /*===Наша команда===*/
 .section-team {
@@ -264,7 +306,7 @@ p {
   line-height: 1.19;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 
 .list-team {
@@ -279,6 +321,32 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-socialNetworks {
+  display: flex;
+  justify-content: center;
+}
+
+.team-socialNetworks > div {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  outline: 1px solid tomato;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.team-socialNetworks > div + div {
+  margin-left: 10px;
+}
+
+.team-socialNetworks svg {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 /* Футер */
