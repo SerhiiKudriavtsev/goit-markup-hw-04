@@ -21,7 +21,7 @@
   --button-shadow-color: rgba(0, 0, 0, 25);
   --heder-bottom-line: #ececec;
   --background-hero-color: #c4c4c4;
-  --background-socialNetworks-color: #afb1b8;
+  --socialNetworks-icon-color: #afb1b8;
 }
 
 html {
@@ -141,7 +141,12 @@ nav ul {
 
 .header-icon {
   margin-right: 10px;
-  outline: 1px solid tomato;
+  fill: var(--parahraf-text-color);
+  /* outline: 1px solid tomato; */
+}
+.header-icon:hover,
+.header-icon:focus {
+  fill: var(--accent-color);
 }
 .header .list:hover,
 .header .list:focus {
@@ -265,7 +270,7 @@ p {
 }
 .section-background-icon {
   display: flex;
-  min-width: 170px;
+  min-width: 270px;
   min-height: 120px;
   background-color: var(--background-team-color);
   margin-bottom: 30px;
@@ -328,28 +333,77 @@ p {
   justify-content: center;
 }
 
-.team-socialNetworks > div {
+.team-socialNetworks > a {
   width: 44px;
   height: 44px;
   display: flex;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  /* margin-left: auto;
-  margin-right: auto; */
+  cursor: pointer;
+  fill: var(--socialNetworks-icon-color);
 }
 
-.team-socialNetworks > div + div {
+.team-socialNetworks > a + a {
   margin-left: 10px;
 }
 
-.team-socialNetworks svg {
+.socialNetworks-icon {
   max-width: 20px;
   max-height: 20px;
 }
+.team-socialNetworks > a:hover,
+.team-socialNetworks > a:focus {
+  background-color: var(--accent-color);
+  border: 1px solid #000000;
+  fill: #ffffff;
+}
 
-/* Футер */
+/*===Постоянные клиенты===*/
+.section-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.client-list {
+  display: flex;
+}
+
+.client-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--socialNetworks-icon-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-item:hover,
+.client-item:focus {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  fill: var(--accent-color);
+}
+
+.client-list a + a {
+  margin-left: 30px;
+}
+
+.client-icon {
+  width: 170px;
+  height: 92px;
+  fill: var(--socialNetworks-icon-color);
+}
+
+.client-icon:hover,
+.client-icon:focus {
+  /* border: 1px solid var(--accent-color);
+  border-radius: 4px; */
+  fill: var(--accent-color);
+}
+/*===== Футер ======*/
 .footer {
   font-weight: 400;
   font-size: 14px;
@@ -357,6 +411,14 @@ p {
   background-color: var(--background-hero-footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer > div {
+  display: flex;
+}
+
+.footer-contacts {
+  margin-right: 70px;
 }
 
 .footer .link:hover,
@@ -389,6 +451,45 @@ address li {
 .tel {
   font-style: normal;
   color: var(--footer-mail-tel-color);
+}
+
+.footer-socialNetworks {
+  padding-top: 12px;
+}
+
+.footer h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--background-color);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-list a + a {
+  margin-left: 10px;
+}
+
+.footer-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--background-color);
 }
 
 /*==========portfolio========== */
