@@ -134,23 +134,22 @@ nav ul {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .mailh,
 .telh {
   color: var(--parahraf-text-color);
+  fill: var(--parahraf-text-color);
+  align-items: center;
 }
 
 .header-icon {
   margin-right: 10px;
-  fill: var(--parahraf-text-color);
-  /* outline: 1px solid tomato; */
 }
-.header-icon:hover,
-.header-icon:focus {
-  fill: var(--accent-color);
-}
+
 .header .list:hover,
 .header .list:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .header .list.current {
   color: var(--accent-color);
@@ -292,6 +291,7 @@ p {
 
 .section-team li {
   padding-bottom: 30px;
+  background-color: var(--background-color);
 }
 
 .image-team {
@@ -333,7 +333,7 @@ p {
   justify-content: center;
 }
 
-.team-socialNetworks > a {
+.team-socialNetworks a {
   width: 44px;
   height: 44px;
   display: flex;
@@ -345,7 +345,7 @@ p {
   fill: var(--socialNetworks-icon-color);
 }
 
-.team-socialNetworks > a + a {
+.team-socialNetworks li + li {
   margin-left: 10px;
 }
 
@@ -353,10 +353,10 @@ p {
   max-width: 20px;
   max-height: 20px;
 }
-.team-socialNetworks > a:hover,
-.team-socialNetworks > a:focus {
+.team-socialNetworks a:hover,
+.team-socialNetworks a:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  fill: var(--background-color);
 }
 
 /*===Постоянные клиенты===*/
@@ -379,14 +379,14 @@ p {
   align-items: center;
 }
 
-.client-item:hover,
-.client-item:focus {
+.client-item:hover svg,
+.client-item:focus svg {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   fill: var(--accent-color);
 }
 
-.client-list a + a {
+.client-list li + li {
   margin-left: 30px;
 }
 
@@ -465,14 +465,18 @@ address li {
   text-align: left;
 }
 
-.footer-list a + a {
+.footer-list {
+  display: flex;
+}
+
+.footer-list li + li {
   margin-left: 10px;
 }
 
 .footer-link {
   width: 44px;
   height: 44px;
-  display: inline-flex;
+  display: flex;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   justify-content: center;
