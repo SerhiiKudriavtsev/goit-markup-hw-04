@@ -483,7 +483,8 @@ address li {
   align-items: center;
 }
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus {
   background-color: var(--accent-color);
 }
 
