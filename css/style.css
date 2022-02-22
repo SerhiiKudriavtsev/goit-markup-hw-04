@@ -289,7 +289,7 @@ p {
   padding-bottom: 94px;
 }
 
-.section-team li {
+.nomber-team {
   padding-bottom: 30px;
   background-color: var(--background-color);
 }
@@ -328,16 +328,15 @@ p {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-socialNetworks {
+.team-social-networks {
   display: flex;
   justify-content: center;
 }
 
-.team-socialNetworks a {
+.team-social-networks a {
   width: 44px;
   height: 44px;
   display: flex;
-  /* outline: 1px solid tomato; */
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -345,16 +344,16 @@ p {
   fill: var(--socialNetworks-icon-color);
 }
 
-.team-socialNetworks li + li {
+.team-social-networks li + li {
   margin-left: 10px;
 }
 
-.socialNetworks-icon {
+.social-networks-icon {
   max-width: 20px;
   max-height: 20px;
 }
-.team-socialNetworks a:hover,
-.team-socialNetworks a:focus {
+.team-social-networks a:hover,
+.team-social-networks a:focus {
   background-color: var(--accent-color);
   fill: var(--background-color);
 }
@@ -450,7 +449,7 @@ address li {
   color: var(--footer-mail-tel-color);
 }
 
-.footer-socialNetworks {
+.footer-social-networks {
   padding-top: 12px;
 }
 
